@@ -16,12 +16,13 @@ public class Homework {
         System.out.println(uniqueWithSet(example));
         System.out.println(uniqueWithList(example));
     }
-    public static Set<String> uniqueWithSet(List<String>example){
+    public static List uniqueWithSet(List<String>example){
         Set<String> hashSet = new HashSet<>();
         for(int i=example.size()-1;i>=0;i--) {
             hashSet.add(example.get(i));
         }
-        return hashSet;
+        List<String> result = new ArrayList<>(hashSet);
+        return result;
     }
     public static List uniqueWithList(List<String>example){
         List<String> result = new ArrayList<>(example);
