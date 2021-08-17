@@ -17,10 +17,7 @@ public class Homework {
         System.out.println(uniqueWithList(example));
     }
     public static List uniqueWithSet(List<String>example){
-        Set<String> hashSet = new HashSet<>();
-        for(int i=example.size()-1;i>=0;i--) {
-            hashSet.add(example.get(i));
-        }
+        Set<String> hashSet = new HashSet<>(example);
         List<String> result = new ArrayList<>(hashSet);
         return result;
     }
